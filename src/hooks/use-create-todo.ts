@@ -1,3 +1,4 @@
+import { promiser } from "@/utils/helpers/promiser";
 import { TodoSchemaProps } from "@/validations/todo";
 import { useMutation } from "@tanstack/react-query";
 import { getStorageValue, setStorageValue } from "./use-local-storage";
@@ -17,6 +18,6 @@ export const useCreateToDo = () =>
 
       items.push(data);
 
-      setStorageValue("todo", items);
+      await promiser(() => setStorageValue("todo", items), 2000);
     },
   });
