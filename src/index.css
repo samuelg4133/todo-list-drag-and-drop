@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply font-inter scroll-smooth;
+}
+
+*:focus {
+  @apply outline-cyan-200
+}
+
+body {
+  @apply bg-slate-50;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, b, strong, small {
+  @apply text-gray-900
+}
+
+::selection {
+  @apply bg-blue-500 text-white;
+}
